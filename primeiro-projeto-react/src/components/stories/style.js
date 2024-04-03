@@ -27,7 +27,7 @@ export const Container = styled.div`
 export const Profile = styled.div`
     position: relative;
     width: 74px;
-    heigth: 74px;
+    height: 74px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -44,11 +44,12 @@ export const Profile = styled.div`
 
     img {
         width: 68px;
-        heigth: 68px;
+        height: 68px;
         border-radius: 50%;
     }                
 `;
 
 export const Button = styled.button`
     border: none;
+    background-color:transparent;
 `;

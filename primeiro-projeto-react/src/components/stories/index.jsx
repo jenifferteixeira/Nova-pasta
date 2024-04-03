@@ -6,7 +6,7 @@ import * as C from './style';
 export function Stories() {
     const [showAll, setShowAll] = useState(false);
 
-    const numberArray = showAll ? 20 : 8;
+    const numberArray = showAll ? 20 : 12;
 
     function handleShowAll() {
         setShowAll(!showAll);
@@ -15,16 +15,19 @@ export function Stories() {
     return (
         <Flex padding="8px 20px" align="start" gap="4px">
             <Typography weight="400" size="18px" height="21px">
-                Historias
+                Histórias
             </Typography>
 
+        
             <Flex align="end">
-                <Button onClick={() => handleShowAll()}>
+                <C.Button onClick={() => handleShowAll()}>
                     <Typography size="14px">
                         {showAll ? "Ver menos" : "Ver mais"}
                     </Typography>
-                </Button>
+                </C.Button>
             </Flex>
+            
+
             <C.Container>
                 {Array.from(Array(numberArray)).map((item, index) => (
                     <C.Profile key={index}>

@@ -21,7 +21,7 @@ export const BtnTheme = styled.button`
     font-size: 24px;
     color: ${(props) => props.theme.textPrimary};
     position: absolute;
-    rigth: 0;
+    left: 250px;
     top: 0;
     cursor: pointer;
 
@@ -67,4 +67,10 @@ export const ListIcon = styled.li`
     &:hover {
         opacity:0.7;
     }
+`;
+
+export const Divider = styled.div`
+    width: 100%;
+    height: 1px;
+    border: ${(props) => `1px solid ${props.theme.divider}`};
 `;

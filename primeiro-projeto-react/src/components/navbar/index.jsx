@@ -1,10 +1,10 @@
-import { BsSun } from "react-icons/bs";
-import { BiMoon } from "react-icons/bi";
-import { AiOutLineHouse } from "react-icons/ai";
+import { BsSun, BsGear } from "react-icons/bs";
+import { BiMoon, BiExit } from "react-icons/bi";
+import { AiOutlineHome } from "react-icons/ai";
 import { MdOutlineSearch } from "react-icons/md";
 import { FiSend } from "react-icons/fi";
 import { GiClapperboard } from "react-icons/gi";
-import { BsGear } from "react-icons/bs";
+
 
 import LogoInstagram from "../../assets/logo-instagram.svg";
 
@@ -13,12 +13,12 @@ import * as C from "./style";
 
 const menuNav = [
     {
-        icon: <AiOutLineHouse />,
+        icon: <AiOutlineHome />,
         menuName: 'Início'
     },
     {
         icon: <MdOutlineSearch />,
-        menuName: 'Exploar'
+        menuName: 'Explorar'
     },
     {
         icon: <FiSend />,
@@ -49,7 +49,7 @@ export function NavBar({ themeToggler, theme }) {
     return (
         <C.Conteiner>
             <Flex>
-                <C.BtnTheme onClick={themeToggler}>
+                <C.BtnTheme onClick={themeToggler} >
                     {theme === 'dark' ? <BsSun /> : <BiMoon />}
                 </C.BtnTheme>
             </Flex>
@@ -84,6 +84,17 @@ export function NavBar({ themeToggler, theme }) {
                         <Typography>{menu.menuName}</Typography>
                     </C.ListIcon>
                 ))}
+            </Flex>
+
+            <Spacer />
+            <C.Divider />
+            <Spacer margin="8px"/>
+
+            <Flex align="start">
+                <C.ListIcon>
+                    <BiExit />
+                    <Typography>Sair</Typography>
+                </C.ListIcon>
             </Flex>
         </C.Conteiner>
     );

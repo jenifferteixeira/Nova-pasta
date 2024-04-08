@@ -16,7 +16,7 @@ export const Screen = styled.div`
     height: 100vh;
     display: flex;
     flex-direction: row;
-    align-itens: start;
+    align-items: start;
     background-color: ${(props) => props.theme.primary};
 `;
 
@@ -51,7 +51,7 @@ margin: ${(props) => props.margin || '20px'};
 
 export const Button = styled.button`
 background-color: transparent;
-boder: none;
+border: none;
 cursor: pointer;
 
 &:hover {
